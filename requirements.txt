@@ -1,0 +1,40 @@
+# NEURO-TABPFN PIPELINE - REQUISITOS
+# Instalar con: pip install -r requirements.txt
+
+# Core ML
+torch>=2.0.0
+numpy<2.0
+scipy>=1.10.0
+
+# Hugging Face (para cargar ISLES'24 sin descargar 99GB)
+datasets[nifti]>=4.5.0
+huggingface_hub>=0.17.0
+certifi>=2024.8.30
+
+# Neuroimaging
+nibabel>=5.0.0        # Para cargar archivos NIfTI (.nii.gz)
+nilearn>=0.10.0       # Para preprocesamiento de imágenes cerebrales
+monai>=1.3.0          # MONAI para imágenes médicas (opcional, pero recomendado)
+pydicom>=3.0.0
+
+# TabPFN y Do-PFN
+tabpfn>=2.0.0         # TabPFN oficial de PriorLabs
+
+# Scikit-learn
+scikit-learn>=1.3.0
+
+# Utilidades
+pandas>=2.0.0
+matplotlib>=3.7.0
+tqdm>=4.65.0
+
+ipykernel
+ipywidgets
+
+# Visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+
+nimfa 
+xgboost
