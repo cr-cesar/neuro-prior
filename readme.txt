@@ -1,36 +1,41 @@
-# Para correr desde el main
+---
+NEURO-PRIOR FOUNDATION MODEL TRAINING DATA SPECIFICATION
+---
 
-Primero debes ir a tu root .../Debbuging Neuro
+# Running from `main.py`
 
-conda create -n debugging python=3.12 -y
-conda activate debugging
-which Python
+First, navigate to your root directory: `.../neuro-prior`
 
+```bash
+# Create and activate the environment
+conda create -n neuro python=3.12 -y
+conda activate neuro
+which python
+
+# Install PyTorch dependencies
 pip install torch torchvision torchaudio
 
+# Install project requirements and run
 pip install -r requirements.txt
 python main.py
 
-### Línea de Comandos
 
-```
-# Ejecución básica
+
+Command Line Options
+You can customize the execution using the following flags:
+
+# Basic execution
 python main.py
 
-# Con opciones personalizadas
+# With custom options
 python main.py --n_cases 50 --vae_epochs 30 --do_steps 200 --output_dir Data
 
-# Sin visualizaciones (más rápido)
+# Without visualizations (faster)
 python main.py --skip_plots
 
-# Con caché de HuggingFace personalizado
-python main.py --cache_dir ~/hf-datasets-cache
 
-```
-
-
-
-# Para correr en Jupyter notebook
+Running in Jupyter Notebook
+To set up the environment for a notebook, run:
 
 conda create -n debugging python=3.12 -y
 conda activate debugging
@@ -38,11 +43,3 @@ which python
 pip install -r requirements.txt
 pip install jupyter
 jupyter notebook
-
-
-Nota: Una vez en el notebook cambiar estas dos líneas:
-
-os.environ["HF_DATASETS_CACHE"] = "/Users/tu_usuario/hf-datasets-cache" (carpeta local donde se guardará la data)
-ROOT = "/Users/tu_usuario/path/to/neuro_tabpfn" (ruta al proyecto)
-
-Y en la celda de configuración cambiar N_CASES = 149 a un número menor (por ejemplo 50) para pruebas rápidas.
