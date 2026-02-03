@@ -1,5 +1,5 @@
-# NEURO-PRIOR PIPELINE - REQUISITOS
-# Instalar con: pip install -r requirements.txt
+# NEURO-PRIOR PIPELINE 
+# Install with: pip install -r requirements.txt
 
 # Core ML
 torch>=2.0.0
